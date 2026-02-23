@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clairvoyance - Hybrid Platform Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+        
+        .tagline {
+            font-size: 20px;
+            color: #666666;
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        /* Hybrid Concept */
+        .hybrid-concept {
+            border: 2px solid #000000;
+            padding: 40px;
+            margin-bottom: 60px;
+            background: #fafafa;
+        }
+        
+        .concept-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .concept-text {
+            text-align: center;
+            font-size: 15px;
+            color: #666666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .benefit-item {
+            background: #ffffff;
+            border: 1px solid #000000;
+            padding: 15px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .benefit-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        /* Three Tiers Diagram */
+        .tiers-diagram {
+            margin-bottom: 80px;
+        }
+        
+        .tiers-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 2px solid #000000;
+        }
+        
+        .tier-column {
+            border-right: 2px solid #000000;
+        }
+        
+        .tier-column:last-child {
+            border-right: none;
+        }
+        
+        .tier-header {
+            background: #000000;
+            color: #ffffff;
+            padding: 25px 20px;
+            text-align: center;
+        }
+        
+        .tier-number {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .tier-name {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .tier-audience {
+            font-size: 12px;
+            color: #cccccc;
+        }
+        
+        .tier-body {
+            background: #ffffff;
+            padding: 25px 20px;
+        }
+        
+        .tier-section {
+            margin-bottom: 20px;
+        }
+        
+        .tier-section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999999;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .tier-example {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .tier-features {
+            font-size: 13px;
+        }
+        
+        .tier-feature {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .tier-feature:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-bullet {
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        /* User Progression Diagram */
+        .progression-section {
+            margin-bottom: 80px;
+        }
+        
+        .progression-diagram {
+            border: 2px solid #000000;
+            padding: 40px;
+            background: #fafafa;
+        }
+        
+        .progression-paths {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .path-track {
+            background: #ffffff;
+            border: 1px solid #000000;
+            padding: 30px;
+        }
+        
+        .path-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .path-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .path-step {
+            flex: 1;
+            min-width: 200px;
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .path-step-number {
+            background: #000000;
+            color: #ffffff;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .path-step-text {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        /* Why It Works */
+        .why-section {
+            margin-bottom: 80px;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: #000000;
+            border: 1px solid #000000;
+        }
+        
+        .why-card {
+            background: #ffffff;
+            padding: 30px;
+        }
+        
+        .why-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .why-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .why-text {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.6;
+        }
+        
+        /* Implementation Phases */
+        .implementation-section {
+            margin-bottom: 80px;
+        }
+        
+        .phases-timeline {
+            display: flex;
+            gap: 0;
+            border: 2px solid #000000;
+        }
+        
+        .phase-box {
+            flex: 1;
+            border-right: 2px solid #000000;
+            background: #ffffff;
+        }
+        
+        .phase-box:last-child {
+            border-right: none;
+        }
+        
+        .phase-header {
+            background: #000000;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .phase-number {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #cccccc;
+        }
+        
+        .phase-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .phase-content {
+            padding: 25px 20px;
+        }
+        
+        .phase-desc {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .phase-focus {
+            background: #fafafa;
+            border-left: 2px solid #000000;
+            padding: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        /* Platform Comparison */
+        .comparison-section {
+            margin-bottom: 80px;
+        }
+        
+        .comparison-table {
+            border: 2px solid #000000;
+            background: #ffffff;
+        }
+        
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 200px repeat(3, 1fr);
+            background: #000000;
+            color: #ffffff;
+            border-bottom: 2px solid #000000;
+        }
+        
+        .comparison-cell-header {
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+            border-right: 2px solid #000000;
+        }
+        
+        .comparison-cell-header:last-child {
+            border-right: none;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 200px repeat(3, 1fr);
+            border-bottom: 1px solid #000000;
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-cell {
+            padding: 15px 20px;
+            border-right: 1px solid #e0e0e0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .comparison-cell:first-child {
+            font-weight: 500;
+            justify-content: flex-start;
+            background: #fafafa;
+        }
+        
+        .comparison-cell:last-child {
+            border-right: none;
+        }
+        
+        .check {
+            color: #000000;
+            font-size: 20px;
+        }
+        
+        .cross {
+            color: #cccccc;
+            font-size: 20px;
+        }
+        
+        /* Success Factors */
+        .success-section {
+            margin-bottom: 60px;
+        }
+        
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .success-card {
+            border: 1px solid #000000;
+            padding: 25px;
+            background: #ffffff;
+        }
+        
+        .success-number {
+            background: #000000;
+            color: #ffffff;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .success-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .success-text {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+        }
+        
+        /* Conclusion */
+        .conclusion-box {
+            border: 2px solid #000000;
+            padding: 40px;
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .conclusion-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .conclusion-text {
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #cccccc;
+        }
+        
+        .conclusion-highlight {
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 968px) {
+            .tiers-visual {
+                grid-template-columns: 1fr;
+            }
+            
+            .tier-column {
+                border-right: none;
+                border-bottom: 2px solid #000000;
+            }
+            
+            .tier-column:last-child {
+                border-bottom: none;
+            }
+            
+            .phases-timeline {
+                flex-direction: column;
+            }
+            
+            .phase-box {
+                border-right: none;
+                border-bottom: 2px solid #000000;
+            }
+            
+            .phase-box:last-child {
+                border-bottom: none;
+            }
+            
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-cell-header,
+            .comparison-cell {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            .why-grid,
+            .success-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Clairvoyance</div>
+            <div class="tagline">Complete Guide to the Hybrid Platform</div>
+        </div>
+        
+        <!-- Hybrid Concept -->
+        <div class="hybrid-concept">
+            <div class="concept-title">What Is the Hybrid Approach?</div>
+            <div class="concept-text">
+                A three-tier model that serves users at every skill level. Unlike traditional platforms that offer only simple betting or complex platforms that overwhelm beginners, Clairvoyance starts simple and grows with you.
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>Start with familiar single-outcome betting</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>Progress to combination bets when ready</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>Access advanced tools without switching platforms</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>Stay at your comfort level without pressure</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Three Tiers Diagram -->
+        <div class="tiers-diagram">
+            <div class="section-header">The Three Tiers</div>
+            
+            <div class="tiers-visual">
+                <!-- Tier 1 -->
+                <div class="tier-column">
+                    <div class="tier-header">
+                        <div class="tier-number">1</div>
+                        <div class="tier-name">Simple Markets</div>
+                        <div class="tier-audience">Everyone • No Experience Required</div>
+                    </div>
+                    <div class="tier-body">
+                        <div class="tier-section">
+                            <div class="tier-section-title">What You Do</div>
+                            <div style="font-size: 13px; color: #666666; margin-bottom: 15px;">
+                                Bet on single outcomes. Pick yes or no, place your bet, wait for result.
+                            </div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <div class="tier-section-title">Example</div>
+                            <div class="tier-example">
+                                <strong>Will Bitcoin reach $100k by Dec 31?</strong><br>
+                                Your bet: YES for $100<br>
+                                If correct: Win $150
+                            </div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <div class="tier-section-title">Available Features</div>
+                            <div class="tier-features">
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>One-click betting</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Live odds updates</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Instant deposits</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Mobile app</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Social features</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Automatic payouts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tier 2 -->
+                <div class="tier-column">
+                    <div class="tier-header">
+                        <div class="tier-number">2</div>
+                        <div class="tier-name">Combo Markets</div>
+                        <div class="tier-audience">Intermediate • Some Experience</div>
+                    </div>
+                    <div class="tier-body">
+                        <div class="tier-section">
+                            <div class="tier-section-title">What You Do</div>
+                            <div style="font-size: 13px; color: #666666; margin-bottom: 15px;">
+                                Bet on 2-3 events together. All must be true to win. Bigger payouts.
+                            </div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <div class="tier-section-title">Example</div>
+                            <div class="tier-example">
+                                <strong>BTC reaches $100k AND ETH reaches $5k</strong><br>
+                                Your bet: $100<br>
+                                If BOTH happen: Win $400<br>
+                                If only ONE: Lose bet
+                            </div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <div class="tier-section-title">New Features Unlocked</div>
+                            <div class="tier-features">
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Combo builder tool</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Suggested combos</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Correlation hints</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Early exit option</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tier 3 -->
+                <div class="tier-column">
+                    <div class="tier-header">
+                        <div class="tier-number">3</div>
+                        <div class="tier-name">Advanced Combos</div>
+                        <div class="tier-audience">Expert • Maximum Sophistication</div>
+                    </div>
+                    <div class="tier-body">
+                        <div class="tier-section">
+                            <div class="tier-section-title">What You Do</div>
+                            <div style="font-size: 13px; color: #666666; margin-bottom: 15px;">
+                                Bet on 4-10 events. Build complex positions. Split, create sub-markets, provide liquidity.
+                            </div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <div class="tier-section-title">Example</div>
+                            <div class="tier-example">
+                                <strong>BTC>$100k AND ETH volume>BTC AND gas<10 gwei AND TVL>$200B AND no major hack</strong><br>
+                                Your bet: $500<br>
+                                If ALL FIVE: Win $8,000
+                            </div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <div class="tier-section-title">Advanced Features</div>
+                            <div class="tier-features">
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Custom 4-10 event combos</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Position splitting</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Fractal markets</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Meta-markets</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Liquidity provision</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Oracle participation</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Correlation mining</div>
+                                </div>
+                                <div class="tier-feature">
+                                    <div class="feature-bullet">•</div>
+                                    <div>Governance voting</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- User Progression -->
+        <div class="progression-section">
+            <div class="section-header">User Progression Path</div>
+            
+            <div class="progression-diagram">
+                <div class="progression-paths">
+                    <!-- Beginner Journey -->
+                    <div class="path-track">
+                        <div class="path-title">Beginner Journey</div>
+                        <div class="path-steps">
+                            <div class="path-step">
+                                <div class="path-step-number">1</div>
+                                <div class="path-step-text">Sign up, make first simple bet on popular event</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">2</div>
+                                <div class="path-step-text">Win or lose, see how platform works</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">3</div>
+                                <div class="path-step-text">Make 5-10 more simple bets over weeks</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">4</div>
+                                <div class="path-step-text">Platform suggests trying combo: BTC AND ETH targets</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">5</div>
+                                <div class="path-step-text">Try first combo with platform suggestion</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">6</div>
+                                <div class="path-step-text">See higher payout, understand concept</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">7</div>
+                                <div class="path-step-text">Now use both simple and combo markets</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Journey -->
+                    <div class="path-track">
+                        <div class="path-title">Advanced Journey</div>
+                        <div class="path-steps">
+                            <div class="path-step">
+                                <div class="path-step-number">8</div>
+                                <div class="path-step-text">Made 50+ bets across simple and combo tiers</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">9</div>
+                                <div class="path-step-text">Platform unlocks Advanced Mode with notification</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">10</div>
+                                <div class="path-step-text">Explore custom combo builder, 4-10 event positions</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">11</div>
+                                <div class="path-step-text">Try position splitting to hedge complex bet</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">12</div>
+                                <div class="path-step-text">Provide liquidity to earn passive fees</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">13</div>
+                                <div class="path-step-text">Become oracle to earn resolution fees</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">14</div>
+                                <div class="path-step-text">Receive governance tokens, vote on changes</div>
+                            </div>
+                            <div class="path-step">
+                                <div class="path-step-number">15</div>
+                                <div class="path-step-text">Now power user fully utilizing Tier 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Why the Hybrid Model Works -->
+        <div class="why-section">
+            <div class="section-header">Why the Hybrid Model Works</div>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">👥</div>
+                    <div class="why-title">Serves Multiple User Segments</div>
+                    <div class="why-text">
+                        Most users want simplicity for elections and sports. Some want combination betting for investment theses. A few want professional tools. Clairvoyance serves all three without compromise.
+                    </div>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">💧</div>
+                    <div class="why-title">Network Effects & Liquidity</div>
+                    <div class="why-text">
+                        Starting with simple markets attracts large user base. This creates deep liquidity in popular events. Benefits all users including those using advanced Tier 3 features.
+                    </div>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">📈</div>
+                    <div class="why-title">Natural User Progression</div>
+                    <div class="why-text">
+                        Beginners start simple. As they gain confidence, Tier 2 awaits. Experts have Tier 3. Users never outgrow the platform—everything they need is already available.
+                    </div>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <div class="why-title">Competitive Differentiation</div>
+                    <div class="why-text">
+                        Polymarket offers simplicity but no advanced features. Complex platforms scare away casual users. Clairvoyance is the only platform serving both audiences equally well.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Implementation Strategy -->
+        <div class="implementation-section">
+            <div class="section-header">Implementation Strategy</div>
+            
+            <div class="phases-timeline">
+                <!-- Phase 1 -->
+                <div class="phase-box">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 1</div>
+                        <div class="phase-title">Build Tier 1 Foundation</div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-desc">
+                            Launch with simple markets only. Make it excellent—as good as or better than Polymarket. Fast execution, clean interface, good liquidity, reliable resolution.
+                        </div>
+                        <div class="phase-focus">
+                            <strong>Critical:</strong> If Tier 1 fails, entire platform fails. No second chances.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Phase 2 -->
+                <div class="phase-box">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 2</div>
+                        <div class="phase-title">Add Tier 2 Combos</div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-desc">
+                            Once Tier 1 has traction, introduce 2-3 event combinations. Start with suggested combos. Make combo builder intuitive. Show clear examples.
+                        </div>
+                        <div class="phase-focus">
+                            <strong>Target:</strong> Market to existing Tier 1 users. Offer incentives and tutorials.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Phase 3 -->
+                <div class="phase-box">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 3</div>
+                        <div class="phase-title">Launch Tier 3 Advanced</div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-desc">
+                            Roll out professional features: position splitting, fractal markets, liquidity provision, correlation mining. These serve smaller but high-value user base.
+                        </div>
+                        <div class="phase-focus">
+                            <strong>Focus:</strong> Market to crypto-native users and professional traders.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Platform Comparison -->
+        <div class="comparison-section">
+            <div class="section-header">Platform Comparison</div>
+            
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-cell-header">Feature</div>
+                    <div class="comparison-cell-header">Polymarket</div>
+                    <div class="comparison-cell-header">Clairvoyance</div>
+                    <div class="comparison-cell-header">Complex Platforms</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Simple Markets</div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div class="comparison-cell"><span class="cross">✗</span></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Combo Markets</div>
+                    <div class="comparison-cell"><span class="cross">✗</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Advanced Tools</div>
+                    <div class="comparison-cell"><span class="cross">✗</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Beginner Friendly</div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div class="comparison-cell"><span class="cross">✗</span></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Learning Curve</div>
+                    <div class="comparison-cell">Low</div>
+                    <div class="comparison-cell">Low to High</div>
+                    <div class="comparison-cell">High</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Success Factors -->
+        <div class="success-section">
+            <div class="section-header">Key Success Factors</div>
+            
+            <div class="success-grid">
+                <div class="success-card">
+                    <div class="success-number">1</div>
+                    <div class="success-title">Excellence in Tier 1</div>
+                    <div class="success-text">
+                        Simple markets must be exceptional. Fast, reliable, good liquidity, clean interface. If Tier 1 fails, the entire platform fails. Most users will stay here—make it great for them.
+                    </div>
+                </div>
+                
+                <div class="success-card">
+                    <div class="success-number">2</div>
+                    <div class="success-title">Smooth Progression</div>
+                    <div class="success-text">
+                        Moving between tiers should feel natural. Suggest combos at the right time. Provide tutorials. Show examples. Don't force complexity on users who aren't ready.
+                    </div>
+                </div>
+                
+                <div class="success-card">
+                    <div class="success-number">3</div>
+                    <div class="success-title">Shared Liquidity Pool</div>
+                    <div class="success-text">
+                        Liquidity from simple markets should benefit combo markets. Use AMM to price combinations based on underlying probabilities. Ensures even advanced positions have reasonable liquidity.
+                    </div>
+                </div>
+                
+                <div class="success-card">
+                    <div class="success-number">4</div>
+                    <div class="success-title">Clear Value Proposition</div>
+                    <div class="success-text">
+                        Users need to understand why they would move up tiers: higher payouts, more control, correlation rewards, governance. But staying in Tier 1 is perfectly fine too.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Conclusion -->
+        <div class="conclusion-box">
+            <div class="conclusion-title">The Future of Prediction Markets</div>
+            <div class="conclusion-text">
+                The hybrid approach positions Clairvoyance as <span class="conclusion-highlight">the only prediction market platform that serves everyone</span> from casual bettors to professional traders. By starting simple and adding sophistication optionally, it captures a broader market than competitors who force users into a single complexity level.
+                <br><br>
+                Success requires <span class="conclusion-highlight">excellence at every tier.</span> Tier 1 must match or beat Polymarket. Tier 2 must make combinations accessible and valuable. Tier 3 must provide tools that professionals cannot find elsewhere.
+                <br><br>
+                If executed well, Clairvoyance becomes <span class="conclusion-highlight">the platform users never outgrow.</span> They start here as beginners. They stay here as they become experts.
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
